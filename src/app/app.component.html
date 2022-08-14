@@ -1,6 +1,12 @@
-<app-header>
+<app-header (switchFeature)="onSelectEvent($event)">
 </app-header>
-<app-recipe-book>
-</app-recipe-book>
-<app-shopping-list>
-</app-shopping-list>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-recipe-book *ngIf="currentFeature === 'recipes'">
+      </app-recipe-book>
+      <app-shopping-list *ngIf="currentFeature !== 'recipe'">
+      </app-shopping-list>
+    </div>
+  </div>
+</div>
