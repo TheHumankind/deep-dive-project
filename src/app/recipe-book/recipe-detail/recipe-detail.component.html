@@ -1,12 +1,17 @@
 <div class="row">
   <div class="col-xs-12">
-    <img class="img-responsive" src="" alt="">
+    <img
+    [src]="currentRecepe.imgPath"
+    style="max-height: 300px;"
+    class="img-responsive"
+    src=""
+    alt="">
   </div>
 </div>
 
 <div class="row">
   <div class="col-xs-12">
-    <h2>Recipe Name</h2>
+    <h2> {{currentRecepe.name}}</h2>
   </div>
 </div>
 
@@ -35,7 +40,7 @@
 
 <div class="row">
   <div class="col-xs-12">
-    description
+    {{ currentRecepe.description }}
   </div>
 </div>
 <div class="row">
